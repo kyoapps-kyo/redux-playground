@@ -9,3 +9,5 @@
 ## 分支
 
 1. redux-baseuse - 基本使用方式
+
+2. redux-reconstruct - 重构redux的基本使用方式
