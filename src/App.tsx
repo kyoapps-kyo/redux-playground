@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { Language } from './components/'
+import { useTranslation } from 'react-i18next'
+import store from './redux/store'
 
-function App() {
+
+
+const App: React.FC = () => {
+  const { t } = useTranslation()
+  const [l, setL] = useState({ language: store.getState().language })
+  store.subscribe(() => {
+    setL({
+      language: store.getState().language
+    })
+  })
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex justify-center items-center flex-col h-screen">
+      <Language/>
+      <h1 className="text-3xl font-bold underline mt-10">
+      { t("hello") }
+      </h1>
     </div>
   );
 }
