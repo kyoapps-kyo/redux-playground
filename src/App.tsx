@@ -19,7 +19,7 @@ const App: React.FC = () => {
     <div className="flex justify-center items-center flex-col h-screen">
       <Language/>
       <h1 className="text-3xl font-bold underline mt-10">
-      { t("hello") }
+      { t("hello") }{ l.language === 'zh' ? ' 中文': ' English' }
       </h1>
     </div>
   );

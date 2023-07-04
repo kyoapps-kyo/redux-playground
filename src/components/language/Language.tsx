@@ -1,15 +1,13 @@
 import React from "react";
 // import { LanguageState } from "../../redux/languageReducer";
 import store from "../../redux/store";
+import { changLanguageActionCreator } from '../../redux/language/languageActions'
 
 const clickHandler = (e) =>{
     const { dispatch } = store
     const key = e.target.getAttribute("data-key")
     console.log(key);
-    const action = {
-        type: "change",
-        payload: key
-    }
+    const action = changLanguageActionCreator(key)
     dispatch(action)
 }
 
