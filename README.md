@@ -11,3 +11,5 @@
 1. redux-baseuse - 基本使用方式
 
 2. redux-reconstruct - 重构redux的基本使用方式
+
+3. react-redux - 使用插件进行封装
