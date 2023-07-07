@@ -14,4 +14,6 @@
 
 3. react-redux - 使用插件进行封装
 
+4. redux-combineReducer - 使用combineReducer管理Reducer
+
 [详细阅读](./doc.md)
